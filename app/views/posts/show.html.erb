@@ -1,0 +1,16 @@
+<div class="post">
+<h2 class="title"><%= @post.title %></h2>
+	<p class="date">Post by: <%= @post.name %> | <%= link_to image_tag("edit-icon.jpg", :border => 0, :class => 'icons'), edit_post_path(@post) %> </p>
+		<div class="entry">
+			<p> <%= @post.content %></p>
+		</div>
+		<div class="meta">
+			<p class="tags"><strong>Tags:</strong>
+			<%= join_tags(@post) %></p>
+		</div>
+<%= render :partial => "comments/comment",
+           :collection => @post.comments %>
+<h2>Add a comment:</h2>
+	<%= render "comments/form" %>
+	<p class="notice"><%= notice %></p>
+</div>

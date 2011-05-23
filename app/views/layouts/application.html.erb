@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag :all %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+		</div>
+		<div id="banner"><img src="/images/img01.jpg" width="667" height="118" alt="" /></div>
+	</div>
+	<div id="menu" class="container">
+		<ul>
+			<li class="active"><%= link_to 'Home', posts_path %></li>
+			<li><a href="#">Links</a></li>
+			<li><a href="#">About Me</a></li>
+			<li><a href="#">Contact Me</a></li>
+		</ul>
+	</div>
+	<div id="top-bar" class="container">
+		<div class="bar">
+			<div class="text">My first Ruby on Rails project!!!<%= link_to image_tag("new-file-icon.jpg", :border => 0, :class => 'icons'), new_post_path %></div>
+		</div>
+	</div>
+	<div id="page" class="container">
+		<div id="content">
+<%= yield %>
+		</div>
+		<div id="sidebar">
+			<h2>Who is already <br />on Rails?</h2>
+				<ul>
+					<li><a href="hhttp://www.twitter.com/"><img src="http://rubyonrails.org/images/applications/twitter.jpg" class="border" /></a></li>
+					<li><a href="http://www.groupon.com/"><img src="http://rubyonrails.org/images/applications/groupon.jpg" class="border" /></a></li>
+					<li><a href="http://www.yellowpages.com/"><img src="http://rubyonrails.org/images/applications/yellowpages.jpg" class="border" /></a></li>
+					<li><a href="http://www.github.com/"><img src="http://rubyonrails.org/images/applications/github.jpg" class="border" /></a></li>
+					<li><a href="http://www.shopify.com/"><img src="http://rubyonrails.org/images/applications/shopify.gif" class="border" /></a></li>
+					<li><a href="http://www.basecamphq.com/?source=rails"><img src="http://rubyonrails.org/images/applications/basecamp.gif" class="border" /></a></li>
+				</ul>
+		</div>
+		<div class="clearfix">&nbsp;</div>
+		<div id="footer-bar" class="two-cols">
+			<div class="col1">
+				<h2>Tim O'Reilly, Founder of O'Reilly Media</h2>
+				<p>“Ruby on Rails is a breakthrough in lowering the barriers of entry to programming.
+				Powerful web applications that formerly might have taken weeks or months
+				to develop can be produced in a matter of days.”
+			</p>
+			</div>
+			<div class="col2">
+				<ul>
+					<li><a href="http://www.railscasts.com/">Railscasts.com</a></li>
+					<li><a href="http://api.rubyonrails.org/">Rails: Complete API</a></li>
+					<li><a href="http://macromates.com/">TextMate on OS X</a></li>
+					<li><a href="http://edgeguides.rubyonrails.org/getting_started.html">Getting Started with Rails</a></li>
+				</ul>
+			</div>
+			<div class="clearfix">&nbsp;</div>
+		</div>
+	</div>
+</div>
+<div id="footer" class="container">
+	<p>(c) 2011 My first Ruby on Rails project. Developed by <a href="http://www.dlstudio.ca/">Denis Kishinevsky</a></p>
+</div>
+</body>
+</html>
+
