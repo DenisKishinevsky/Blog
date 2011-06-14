@@ -13865,3 +13865,29 @@ Started GET "/posts" for 127.0.0.1 at 2011-06-13 16:54:47 -0400
   [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
 Rendered posts/index.html.erb within layouts/application (8.0ms)
 Completed 200 OK in 35ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-06-13 16:57:11 -0400
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"
+Rendered posts/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 52ms (Views: 36.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2011-06-14 09:20:56 -0400
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE ("tags".post_id = 1)
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".post_id = 1)[0m
+Rendered comments/_comment.html.erb (6.0ms)
+Rendered comments/_form.html.erb (3.0ms)
+Rendered posts/show.html.erb within layouts/application (76.0ms)
+Completed 200 OK in 107ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-06-14 09:21:49 -0400
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts"
+Rendered posts/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 35ms (Views: 22.0ms | ActiveRecord: 0.0ms)
