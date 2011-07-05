@@ -2,7 +2,7 @@
 <h2 class="title"><%= @post.title %></h2>
 	<p class="date">Post by: <%= @post.name %> | <%= link_to image_tag("edit-icon.jpg", :border => 0, :class => 'icons'), edit_post_path(@post) %> </p>
 		<div class="entry">
-			<p> <%= @post.content %></p>
+		 <%= markdown @post.content %>
 		</div>
 		<div class="meta">
 			<p class="tags"><strong>Tags:</strong>
