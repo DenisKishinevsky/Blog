@@ -1,3 +1,1 @@
 Cannot execute '/Users/dlstudiodesign/.passenger/standalone/3.0.7-x86_64-ruby1.9.2-macosx-10.6/support/helper-scripts/prespawn http://0.0.0.0:3000': Permission denied (13)
-[ pid=31689 thr=0x101206000 file=ext/nginx/HelperAgent.cpp:574 time=2011-06-30 20:47:30.613 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
-Cannot execute '/Users/dlstudiodesign/.passenger/standalone/3.0.7-x86_64-ruby1.9.2-macosx-10.6/support/helper-scripts/prespawn http://0.0.0.0:3000': Permission denied (13)
