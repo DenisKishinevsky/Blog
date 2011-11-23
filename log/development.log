@@ -19272,3 +19272,168 @@ Rendered comments/_comment.html.erb (6.4ms)
 Rendered comments/_form.html.erb (3.5ms)
 Rendered posts/show.html.erb within layouts/application (83.3ms)
 Completed 200 OK in 107ms (Views: 87.5ms | ActiveRecord: 21.5ms)
+
+
+Started HEAD "/" for 127.0.0.1 at 2011-11-22 20:38:18 -0500
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered posts/index.html.erb within layouts/application (62.9ms)
+Completed 200 OK in 162ms (Views: 66.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2011-11-22 20:38:18 -0500
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE ("tags".post_id = 1)[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".post_id = 1)
+Rendered comments/_comment.html.erb (10.0ms)
+Rendered comments/_form.html.erb (35.7ms)
+Rendered posts/show.html.erb within layouts/application (111.8ms)
+Completed 200 OK in 230ms (Views: 114.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-11-22 20:38:22 -0500
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered posts/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 36ms (Views: 24.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2011-11-22 20:38:27 -0500
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 2 LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE ("tags".post_id = 2)[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".post_id = 2)
+Rendered comments/_comment.html.erb (10.8ms)
+Rendered comments/_form.html.erb (3.8ms)
+Rendered posts/show.html.erb within layouts/application (54.5ms)
+Completed 200 OK in 108ms (Views: 57.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-11-22 20:38:37 -0500
+  Processing by PostsController#new as HTML
+Rendered posts/new.html.erb within layouts/application (28.2ms)
+Completed   in 48ms
+
+ActionView::Template::Error (undefined local variable or method `post_dates' for #<#<Class:0x0000010225d660>:0x00000102259128>):
+    1: <h1>New post</h1>
+    2: <%= post_dates %>
+    3: <%= render 'form' %>
+    4: 
+    5: <%= link_to 'Back', posts_path %>
+  app/views/posts/new.html.erb:2:in `_app_views_posts_new_html_erb__89622776471478236_2165488980__1422036325105022021'
+  app/controllers/posts_controller.rb:30:in `new'
+
+Rendered /Users/dlstudiodesign/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/dlstudiodesign/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /Users/dlstudiodesign/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-11-22 20:39:00 -0500
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered posts/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 63ms (Views: 14.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2011-11-22 20:39:02 -0500
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 4 LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE ("tags".post_id = 4)[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".post_id = 4)
+Rendered comments/_comment.html.erb (7.2ms)
+Rendered comments/_form.html.erb (4.6ms)
+Rendered posts/show.html.erb within layouts/application (84.2ms)
+Completed 200 OK in 105ms (Views: 87.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-11-22 20:39:05 -0500
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered posts/index.html.erb within layouts/application (43.3ms)
+Completed 200 OK in 58ms (Views: 46.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2011-11-22 20:39:06 -0500
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 3 LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE ("tags".post_id = 3)[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".post_id = 3)
+Rendered comments/_comment.html.erb (6.3ms)
+Rendered comments/_form.html.erb (3.4ms)
+Rendered posts/show.html.erb within layouts/application (82.7ms)
+Completed 200 OK in 103ms (Views: 86.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2011-11-22 20:39:20 -0500
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 3 LIMIT 1[0m
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" WHERE ("tags".post_id = 3)
+Rendered tags/_form.html.erb (6.3ms)
+Rendered posts/_form.html.erb (68.9ms)
+Rendered posts/edit.html.erb within layouts/application (73.3ms)
+Completed 200 OK in 99ms (Views: 80.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts/3" for 127.0.0.1 at 2011-11-22 20:39:27 -0500
+  Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dwujyWgeOeFunqKzxXjj9JGYwnUFuU0RUFnq8EEF+Gw=", "post"=>{"name"=>"Dennis", "title"=>"One more post ", "content"=>"Faucibus non sit amet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat, dui sed posuere molestie, urna sapien porta purus, vel sodales ante erat sed arcu. Nunc semper, diam ut blandit elementum, ipsum purus vestibulum quam, sit amet auctor est ut risus. Maecenas sed dolore. Faucibus non sit amet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat, dui sed posuere molestie, urna sapien porta purus, vel sodales ante erat sed arcu. Nunc semper, diam ut blandit elementum, ipsum purus vestibulum quam, sit amet auctor est ut risus. Maecenas sed dolore.mmmm", "tags_attributes"=>{"0"=>{"name"=>"post", "_destroy"=>"0", "id"=>"5"}, "1"=>{"name"=>"one more tage", "_destroy"=>"0", "id"=>"6"}, "2"=>{"name"=>""}}}, "commit"=>"Update Post", "id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 3 LIMIT 1[0m
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."id" IN (5, 6) AND ("tags".post_id = 3)
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "posts" SET "content" = 'Faucibus non sit amet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat, dui sed posuere molestie, urna sapien porta purus, vel sodales ante erat sed arcu. Nunc semper, diam ut blandit elementum, ipsum purus vestibulum quam, sit amet auctor est ut risus. Maecenas sed dolore. Faucibus non sit amet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat, dui sed posuere molestie, urna sapien porta purus, vel sodales ante erat sed arcu. Nunc semper, diam ut blandit elementum, ipsum purus vestibulum quam, sit amet auctor est ut risus. Maecenas sed dolore.mmmm', "updated_at" = '2011-11-23 01:39:27.405130' WHERE "posts"."id" = 3[0m
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 90ms
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2011-11-22 20:39:27 -0500
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 3 LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE ("tags".post_id = 3)[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".post_id = 3)
+Rendered comments/_comment.html.erb (8.7ms)
+Rendered comments/_form.html.erb (3.3ms)
+Rendered posts/show.html.erb within layouts/application (83.1ms)
+Completed 200 OK in 104ms (Views: 85.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2011-11-22 20:39:34 -0500
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 3 LIMIT 1[0m
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" WHERE ("tags".post_id = 3)
+Rendered tags/_form.html.erb (10.1ms)
+Rendered posts/_form.html.erb (35.9ms)
+Rendered posts/edit.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 94ms (Views: 42.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts/3" for 127.0.0.1 at 2011-11-22 20:39:41 -0500
+  Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dwujyWgeOeFunqKzxXjj9JGYwnUFuU0RUFnq8EEF+Gw=", "post"=>{"name"=>"Dennis", "title"=>"One more post ", "content"=>"Faucibus non sit amet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat, dui sed posuere molestie, urna sapien porta purus, vel sodales ante erat sed arcu. Nunc semper, diam ut blandit elementum, ipsum purus vestibulum quam, sit amet auctor est ut risus. Maecenas sed dolore. Faucibus non sit amet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat, dui sed posuere molestie, urna sapien porta purus, vel sodales ante erat sed arcu. Nunc semper, diam ut blandit elementum, ipsum purus vestibulum quam, sit amet auctor est ut risus. Maecenas sed dolore./", "tags_attributes"=>{"0"=>{"name"=>"post", "_destroy"=>"0", "id"=>"5"}, "1"=>{"name"=>"one more tage", "_destroy"=>"0", "id"=>"6"}, "2"=>{"name"=>""}}}, "commit"=>"Update Post", "id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 3 LIMIT 1[0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."id" IN (5, 6) AND ("tags".post_id = 3)
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "posts" SET "content" = 'Faucibus non sit amet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat, dui sed posuere molestie, urna sapien porta purus, vel sodales ante erat sed arcu. Nunc semper, diam ut blandit elementum, ipsum purus vestibulum quam, sit amet auctor est ut risus. Maecenas sed dolore. Faucibus non sit amet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat, dui sed posuere molestie, urna sapien porta purus, vel sodales ante erat sed arcu. Nunc semper, diam ut blandit elementum, ipsum purus vestibulum quam, sit amet auctor est ut risus. Maecenas sed dolore./', "updated_at" = '2011-11-23 01:39:41.165906' WHERE "posts"."id" = 3[0m
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 87ms
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2011-11-22 20:39:41 -0500
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 3 LIMIT 1
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE ("tags".post_id = 3)[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".post_id = 3)
+Rendered comments/_comment.html.erb (6.9ms)
+Rendered comments/_form.html.erb (3.5ms)
+Rendered posts/show.html.erb within layouts/application (55.8ms)
+Completed 200 OK in 106ms (Views: 58.8ms | ActiveRecord: 1.9ms)
